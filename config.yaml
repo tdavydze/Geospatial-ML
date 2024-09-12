@@ -1,0 +1,131 @@
+tif_folder: "D:/QGIS/QGIS_FINAL_RES/final_MAPS/GEOTIFF"
+output_folder: "data/mat_files"
+  
+masking_conditions:
+  - file: "Slope.tif"
+    condition: "< -1"
+  - file: "Population.tif"
+    condition: "< -1"
+  - file: "Soil_Thickness.tif"
+    condition: "== 255"
+  - file: "Wetness_Index.tif"
+    condition: "< -999"
+  - file: "Wetness_Index.tif"
+    condition: "== -1"
+  - file: "Climate.tif"
+    condition: "== 0"
+  - file: "GW_Recharge.tif"
+    condition: "<- 999"
+  - file: "Water_Storage_Thickness.tif"
+    condition: "<- 999"
+  - file: "Clay_Content.tif"
+    condition: "<- 999"
+
+masking_regions:
+  - name: "region1"
+    x_min: 10
+    x_max: 25
+    y_min: 75
+    y_max: 82
+  - name: "region2"
+    x_min: -180
+    x_max: -169
+    y_min: 48
+    y_max: 74
+
+features:
+  Slope:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Population:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Soil_Thickness:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Wetness_Index:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Storage_Capacity:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  GW_Abstraction:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Lithology:
+    Interpolate: false
+    OneHot: true
+    Transform: true
+  Land_Cover:
+    Interpolate: false
+    OneHot: true
+    Transform: true
+  Annual_Mean_Temperature:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Annual_Precipitation:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Clay_Content:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Coarse_Fragments_Content:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Evapotranspiration:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  EVI2:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  GW_Recharge:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Mean_Temperature_Coldest_Quarter:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Mean_Temperature_Warmest_Quarter:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Organic_Carbon_Density:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Precipitation_Driest_Quarter:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Precipitation_Wettest_Quarter:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Seismic_Hazard:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Water_Pressure:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+  Water_Storage_Thickness:
+    Interpolate: true
+    OneHot: false
+    Transform: true
+other_maps:
+  Susceptibility:
+    description: ""
