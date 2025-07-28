@@ -47,7 +47,7 @@ def predict_map(chunks = 3,
     
     # Load total length and calculate chunk size
     total_length = sio.loadmat(os.path.join(output_folder, "X.mat"))["X"].shape[1]
-    chunk_size = total_length // chunks  # Assuming you want to divide the total length by 60 to get the chunk size
+    chunk_size = total_length // chunks
     sub_chunk_size = chunk_size // sub_chunks
     
     # Loop over chunks and calculate predictions

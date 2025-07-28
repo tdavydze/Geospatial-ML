@@ -61,7 +61,7 @@ included_shap_values = np.delete(shap_values, excluded_indices, axis=1)
 included_X_train = np.delete(X_train, excluded_indices, axis=1)
 included_feature_names = [i for i in feature_names if not i.startswith(("Lithology", "Land_Cover"))]
 
-# Now plot the SHAP values
+# Plot the SHAP values
 n_top_features = 21
 shap.summary_plot(included_shap_values, included_X_train, feature_names=included_feature_names, plot_type="bar", max_display=n_top_features)
 shap.summary_plot(included_shap_values, included_X_train, plot_type="dot", feature_names=included_feature_names, max_display=n_top_features)
